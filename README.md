@@ -1,4 +1,4 @@
-## Scrum Application
+## Project Management Application
 
 This is a simple implementation of a Scrum Board, a tool that helps visualize and manage work. Originally it was first created in Toyota automotive, but nowadays it's widely used in software development.
 
