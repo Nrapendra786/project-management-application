@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6a18b594-2647-4910-a5b8-29b5c1ade186" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/project-management-backend/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-management-backend/src/main/resources/openapi.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/integration-test/java/com.techtter.blog.scrum/config/H2DatabaseConfig4Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/integration-test/java/com.techtter.blog.scrum/controller/CommonITCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/integration-test/java/com.techtter.blog.scrum/controller/ScrumControllerITCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/integration-test/java/com.techtter.blog.scrum/controller/TaskControllerITCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/integration-test/java/com.techtter.blog.scrum/service/ScrumServiceITCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/java/com/techtter/blog/scrum/ScrumApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/java/com/techtter/blog/scrum/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/java/com/techtter/blog/scrum/controller/ScrumController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/java/com/techtter/blog/scrum/controller/TaskController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/java/com/techtter/blog/scrum/model/Scrum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/java/com/techtter/blog/scrum/model/ScrumDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/java/com/techtter/blog/scrum/model/Task.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/java/com/techtter/blog/scrum/model/TaskDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/java/com/techtter/blog/scrum/model/TaskStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/java/com/techtter/blog/scrum/repository/ScrumRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/java/com/techtter/blog/scrum/repository/TaskRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/java/com/techtter/blog/scrum/service/ScrumService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/java/com/techtter/blog/scrum/service/ScrumServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/java/com/techtter/blog/scrum/service/TaskService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/java/com/techtter/blog/scrum/service/TaskServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/resources/db/changelog/01_init_scrum.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/resources/db/changelog/02_init_task.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/resources/db/changelog/03_scrum_column.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/resources/db/changelog/04_task_status.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/main/resources/db/changelog/db.changelog-master.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-app/src/test/java/com/techtter/blog/scrum/service/ScrumServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/custom-webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/default.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/e2e/tsconfig.e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/app-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/home/home.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/home/home.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/home/home.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/home/home.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/model/scrum/scrum.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/model/scrum/scrum.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/model/task/task.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/model/task/task.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/scrum-dialog/scrum-dialog.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/scrum-dialog/scrum-dialog.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/scrum-dialog/scrum-dialog.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/scrum-dialog/scrum-dialog.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/scrum/scrum.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/scrum/scrum.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/scrum/scrum.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/scrum/scrum.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/service/scrum-service.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/service/scrum-service.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/service/task.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/service/task.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/task-dialog/task-dialog.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/task-dialog/task-dialog.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/task-dialog/task-dialog.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/app/task-dialog/task-dialog.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/assets/background.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/src/typing.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrum-ui/tslint.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Nrapendra786&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/techtter/scrum-board.git&quot;,
+    &quot;accountId&quot;: &quot;5cf39ca7-b8d0-40b4-98ea-073e495df11f&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="1au7HxR9NiJHYXifnhFk15UInSG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/triva/spring-boot-unknown-projects/project-management"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a18b594-2647-4910-a5b8-29b5c1ade186" name="Default Changelist" comment="" />
+      <created>1587573540283</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587573540283</updated>
+    </task>
+    <servers />
+  </component>
+</project>
