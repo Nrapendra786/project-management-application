@@ -1,7 +1,6 @@
 ## Project Management Application
 
-I wrote this application to help companies to do project management efficiently.
-I wrote a simple implementation of a Scrum Board, a tool that helps visualize and manage work.
+I wrote this application to make use of a Scrum Board, a tool that helps visualize and manage work.
 
 A Scrum Board is usually made of 5 columns - *TODO*, *In-Progres*s, *In-Review*, *In-Test*  & *Done*. In each column there are Post-it notes that represents task and their status.
 
