@@ -2,6 +2,7 @@ package com.nrapendra.project.management.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.*;
@@ -21,23 +22,21 @@ import java.util.Objects;
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id",
         scope = Scrum.class)
+@JsonSerialize
 public class Scrum {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-  //  @ApiModelProperty(position = 1)
     private Long id;
 
     @Column(name = "title")
-    //  @ApiModelProperty(position = 2)
     private String title;
 
     @OneToMany(
             cascade = {CascadeType.ALL},
             fetch = FetchType.EAGER)
     @JoinColumn(name = "scrum_id")
-    //  @ApiModelProperty(position = 3)
     private List<Task> tasks;
 
     public void addTask(Task task) {

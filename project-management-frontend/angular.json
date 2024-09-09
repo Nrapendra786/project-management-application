@@ -134,5 +134,8 @@
       }
     }
   },
-  "defaultProject": "scrum-ui"
+  "defaultProject": "scrum-ui",
+  "cli": {
+    "analytics": "e2092c25-84fa-4422-99a7-825853980c9b"
+  }
 }

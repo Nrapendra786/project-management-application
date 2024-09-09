@@ -2,6 +2,7 @@ package com.nrapendra.project.management.controller;
 
 import com.nrapendra.project.management.model.ScrumDTO;
 import com.nrapendra.project.management.model.TaskDTO;
+import com.nrapendra.project.management.response.ScrumResponse;
 import com.nrapendra.project.management.service.ScrumService;
 import com.nrapendra.project.management.model.Scrum;
 
@@ -13,27 +14,25 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/scrums")
+@RequestMapping(value = "/scrums")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "http://localhost:4200")
 public class ScrumController {
 
     private final ScrumService scrumService;
 
-    @GetMapping("/")
- //   @ApiOperation(value="View a list of all Scrum boards", response = Scrum.class, responseContainer = "List")
+    @GetMapping(value= "/",consumes = "application/json",produces = "application/json")
     public ResponseEntity<?> getAllScrums(){
         try {
-            return new ResponseEntity<>(
-                    scrumService.getAllScrumBoards(),
-                    HttpStatus.OK);
+            var scrumResponse = new ScrumResponse();
+            scrumResponse.setScrums(scrumService.getAllScrumBoards());
+            return new ResponseEntity<>(scrumResponse, HttpStatus.OK);
         } catch (Exception e) {
             return errorResponse();
         }
     }
 
     @GetMapping("/{id}")
- //   @ApiOperation(value="Find a Scrum board info by its id", response = Scrum.class)
     public ResponseEntity<?> getScrum(@PathVariable Long id){
         try {
             Optional<Scrum> optScrum = scrumService.getScrumById(id);
@@ -50,7 +49,6 @@ public class ScrumController {
     }
 
     @GetMapping("")
-//    @ApiOperation(value="Find a Scrum board info by its title", response = Scrum.class)
     public ResponseEntity<?> getScrumByTitle(@RequestParam String title){
         try {
             Optional<Scrum> optScrum = scrumService.getScrumByTitle(title);
@@ -67,7 +65,6 @@ public class ScrumController {
     }
 
     @PostMapping("/")
-//    @ApiOperation(value="Save new Scrum board", response = Scrum.class)
     public ResponseEntity<?> createScrum(@RequestBody ScrumDTO scrumDTO){
         try {
             return new ResponseEntity<>(
@@ -79,7 +76,6 @@ public class ScrumController {
     }
 
     @PutMapping("/{id}")
-//    @ApiOperation(value="Update a Scrum board with specific id", response = Scrum.class)
     public ResponseEntity<?> updateScrum(@PathVariable Long id, @RequestBody ScrumDTO scrumDTO){
         try {
             Optional<Scrum> optScrum = scrumService.getScrumById(id);
@@ -96,7 +92,6 @@ public class ScrumController {
     }
 
     @DeleteMapping("/{id}")
-//    @ApiOperation(value="Delete Scrum board with specific id", response = String.class)
     public ResponseEntity<?> deleteScrum(@PathVariable Long id){
         try {
             Optional<Scrum> optScrum = scrumService.getScrumById(id);
@@ -114,7 +109,6 @@ public class ScrumController {
     }
 
     @GetMapping("/{scrumId}/tasks/")
- //   @ApiOperation(value="View a list of all tasks for a Scrum with provided id", response = Task.class, responseContainer = "List")
     public ResponseEntity<?> getAllTasksInScrum(@PathVariable Long scrumId){
          try {
             Optional<Scrum> optScrum = scrumService.getScrumById(scrumId);
@@ -131,7 +125,6 @@ public class ScrumController {
     }
 
     @PostMapping("/{scrumId}/tasks/")
-//    @ApiOperation(value="Save new Task and assign it to Scrum board", response = Scrum.class)
     public ResponseEntity<?> createTaskAssignedToScrum(@PathVariable Long scrumId, @RequestBody TaskDTO taskDTO){
         try {
             return new ResponseEntity<>(

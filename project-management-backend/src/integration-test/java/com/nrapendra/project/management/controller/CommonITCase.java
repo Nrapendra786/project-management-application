@@ -15,7 +15,8 @@ import java.util.Optional;
 
 @TestPropertySource( properties = {
         "spring.datasource.url=jdbc:h2:mem:test",
-        "spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.H2Dialect"
+        "spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.H2Dialect",
+        "spring.jpa.hibernate.ddl-auto = create"
 })
 public class CommonITCase {
 

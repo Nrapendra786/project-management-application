@@ -16,22 +16,22 @@ services:
 
     #Environment variable for DB name, user and password
     environment:
-      - POSTGRES_DB=scrum
-      - POSTGRES_USER=scrum
-      - POSTGRES_PASSWORD=scrum
+      - POSTGRES_DB=${POSTGRES_DATABASE}
+      - POSTGRES_USER=${POSTGRES_USERNAME}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
 
   #Back-end Spring Boot Application
-  scrum-app:
+  project-management-backend:
     #The docker file in scrum-app build the jar and provides the docker image with the following name.
-    build: ./scrum-app
-    container_name: scrum-app
+    build: ./project-management-backend
+    container_name: project-management-backend
 
     #Environment variables for Spring Boot Application.
     environment:
       - DB_SERVER=scrum-postgres
-      - POSTGRES_DB=scrum
-      - POSTGRES_USER=scrum
-      - POSTGRES_PASSWORD=scrum
+      - POSTGRES_DB=${POSTGRES_DATABASE}
+      - POSTGRES_USER=${POSTGRES_USERNAME}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     ports:
       - 8080:8080 # Forward the exposed port 8080 on the container to port 8080 on the host machine
     links:
@@ -39,12 +39,12 @@ services:
 
   #Fron-end Angular Application
   scrum-ui:
-    build: ./scrum-ui
-    container_name: scrum-ui
+    build: ./project-management-frontend
+    container_name: project-management-frontend
     ports:
       - 4200:80
     links:
-      - scrum-app
+      - project-management-backend
 
 #Volumes for DB data
 volumes:

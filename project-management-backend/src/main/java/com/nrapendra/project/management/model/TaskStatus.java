@@ -4,5 +4,5 @@ package com.nrapendra.project.management.model;
 
 //@ApiModel
 public enum TaskStatus {
-    TODO, INPROGRESS, DONE
+    TODO, PROGRESS,TEST,REVIEW, DONE
 }

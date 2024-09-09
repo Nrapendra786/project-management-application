@@ -2,27 +2,28 @@ package com.nrapendra.project.management.service;
 
 import com.nrapendra.project.management.model.Scrum;
 import com.nrapendra.project.management.repository.ScrumRepository;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class ScrumServiceTest {
 
     ScrumService scrumService;
+
     @Mock
     ScrumRepository scrumRepository;
 
-    @Before
+    @BeforeEach
     public void init() {
         scrumService = new ScrumServiceImpl(scrumRepository);
     }

@@ -1,8 +1,9 @@
 ## Project Management Application
 
-This is a simple implementation of a Scrum Board, a tool that helps visualize and manage work. Originally it was first created in Toyota automotive, but nowadays it's widely used in software development.
+I am unemployed software engineer based in Switzerland and wrote this application in switzerland with a hope to help companies to do project management efficiently.
+I wrote a simple implementation of a Scrum Board, a tool that helps visualize and manage work.
 
-A Scrum Board is usually made of 3 columns - *TODO*, *InProgres*s & *Done*. In each column there are Post-it notes that represents task and their status.
+A Scrum Board is usually made of 5 columns - *TODO*, *In-Progres*s, *In-Review*, *In-Test*  & *Done*. In each column there are Post-it notes that represents task and their status.
 
 As already stated this project is an implementation of such board and made of 3 separate Docker containers that holds:
 
@@ -11,7 +12,7 @@ As already stated this project is an implementation of such board and made of 3 
 - Angular frontend
 
 The entry point for a user is a website which is available under the
-address: **http://localhost:4200/**
+address: **http://localhost:8090/**
 
 ![Scrum](https://github.com/techtter/scrum-board/blob/master/assets/scrum.gif)
 
@@ -102,4 +103,4 @@ This is a real endpoint for a user where they can manipulate their
 scrums and tasks. It consumes the REST API endpoints provided by
 *scrum-app*.
 
-It can be entered using link: **http://localhost:4200/**
+It can be entered using link: **http://localhost:8090/**
