@@ -1,3 +1,3 @@
 ### Scrum backend
 
-Spring Boot app - Work in Progress
+Project Management Backend application
