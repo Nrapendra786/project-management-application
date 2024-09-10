@@ -3,6 +3,7 @@ package com.nrapendra.project.management.controller;
 import com.nrapendra.project.management.model.ScrumDTO;
 import com.nrapendra.project.management.model.TaskDTO;
 import com.nrapendra.project.management.response.ScrumResponse;
+import com.nrapendra.project.management.response.TaskResponse;
 import com.nrapendra.project.management.service.ScrumService;
 import com.nrapendra.project.management.model.Scrum;
 
@@ -111,10 +112,13 @@ public class ScrumController {
     @GetMapping("/{scrumId}/tasks/")
     public ResponseEntity<?> getAllTasksInScrum(@PathVariable Long scrumId){
          try {
+
+            var taskResponse = new TaskResponse();
             Optional<Scrum> optScrum = scrumService.getScrumById(scrumId);
             if (optScrum.isPresent()) {
+                taskResponse.setTasks(optScrum.get().getTasks());
                 return new ResponseEntity<>(
-                        optScrum.get().getTasks(),
+                        taskResponse,
                         HttpStatus.OK);
             } else {
                 return noScrumFoundResponse(scrumId);

@@ -7,18 +7,16 @@ import com.nrapendra.project.management.response.ScrumResponse;
 import com.nrapendra.project.management.response.TaskResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
-import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import java.util.List;
+import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -88,18 +86,18 @@ public class ScrumControllerITCase extends CommonITCase {
         Scrum scrum = saveSingleScrumWithOneTask();
 
         //when
-        ResponseEntity<List<TaskResponse>> response = this.restTemplate.exchange(
+        ResponseEntity<TaskResponse> response = this.restTemplate.exchange(
                 baseURL + "/scrums/" + scrum.getId() + "/tasks/",
                 HttpMethod.GET,
                 entity,
-                new ParameterizedTypeReference<List<TaskResponse>>() {});
+                TaskResponse.class);
 
-        //then
-       assertEquals(HttpStatus.OK, response.getStatusCode());
-//        assertEquals(scrum.getTasks().get(0).getId(), Objects.requireNonNull(response.getBody()).getTasks().get(0).getId());
-//        assertEquals(scrum.getTasks().get(0).getTitle(), Objects.requireNonNull(response.getBody()).getTasks().get(0).getTitle());
-//        assertEquals(scrum.getTasks().get(0).getDescription(), Objects.requireNonNull(response.getBody()).getTasks().get(0).getDescription());
-//        assertEquals(scrum.getTasks().get(0).getColor(), Objects.requireNonNull(response.getBody()).getTasks().get(0).getColor());
+          //then
+          assertEquals(HttpStatus.OK, response.getStatusCode());
+          assertEquals(scrum.getTasks().get(0).getId(), Objects.requireNonNull(Objects.requireNonNull(response.getBody()).getTasks().get(0).getId()));
+          assertEquals(scrum.getTasks().get(0).getTitle(), Objects.requireNonNull(response.getBody()).getTasks().get(0).getTitle());
+          assertEquals(scrum.getTasks().get(0).getDescription(), Objects.requireNonNull(response.getBody()).getTasks().get(0).getDescription());
+          assertEquals(scrum.getTasks().get(0).getColor(), Objects.requireNonNull(response.getBody()).getTasks().get(0).getColor());
     }
 
     @Test
@@ -129,7 +127,6 @@ public class ScrumControllerITCase extends CommonITCase {
         HttpHeaders headers = new HttpHeaders();
         headers.add(HttpHeaders.CONTENT_TYPE,"application/json");
 
-
         //when
         ResponseEntity<Scrum> response = this.restTemplate.exchange(
                 baseURL + "/scrums/",
@@ -151,18 +148,19 @@ public class ScrumControllerITCase extends CommonITCase {
     }
 
     @Test
-    @Disabled
     public void whenPostSingleTaskToAlreadyCreatedScrum_thenItIsStoredInDbAndAssignedToScrum() {
 
         //given
         Scrum scrum = saveSingleRandomScrum();
         Task task = createSingleTask();
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_TYPE,"application/json");
 
         //when
         ResponseEntity<Scrum> response = this.restTemplate.exchange(
-                baseURL + "scrums/" + scrum.getId() + "/tasks/",
+                baseURL + "/scrums/" + scrum.getId() + "/tasks/",
                 HttpMethod.POST,
-                new HttpEntity<>(convertTaskToDTO(task), new HttpHeaders()),
+                new HttpEntity<>(convertTaskToDTO(task), headers),
                 Scrum.class);
 
         //then
@@ -192,18 +190,19 @@ public class ScrumControllerITCase extends CommonITCase {
     }
 
     @Test
-    @Disabled
     public void whenPutSingleScrum_thenItIsUpdated() {
 
         //given
         Scrum scrum = saveSingleRandomScrum();
         scrum.setTitle(scrum.getTitle() + " Updated");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_TYPE,"application/json");
 
         //when
         ResponseEntity<Scrum> response = this.restTemplate.exchange(
-                baseURL + "scrums/" + scrum.getId(),
+                baseURL + "/scrums/" + scrum.getId(),
                 HttpMethod.PUT,
-                new HttpEntity<>(convertScrumToDTO(scrum), new HttpHeaders()),
+                new HttpEntity<>(convertScrumToDTO(scrum), headers),
                 Scrum.class);
 
         //then
@@ -212,7 +211,6 @@ public class ScrumControllerITCase extends CommonITCase {
     }
 
     @Test
-    @Disabled
     public void whenDeleteSingleScrumById_thenItIsDeletedFromDb() {
 
         //given
@@ -220,9 +218,9 @@ public class ScrumControllerITCase extends CommonITCase {
 
         //when
         ResponseEntity<String> response = this.restTemplate.exchange(
-                baseURL + "scrums/" + scrum.getId(),
+                baseURL + "/scrums/" + scrum.getId(),
                 HttpMethod.DELETE,
-                new HttpEntity<>(new HttpHeaders()),
+                entity,
                 String.class);
 
         //then
